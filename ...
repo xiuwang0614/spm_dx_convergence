@@ -103,6 +103,9 @@ while t_now < t_out
             if ireject == mxrej,
                 error('The requested tolerance is too high.');
             end;
+            # 是不是只要这里不报错，tolerance 就ok?
+            # 但是他写的这个ireject 似乎永远不可能 == mxrej，在while里
+            # shit 是可以的
             ireject = ireject + 1;
         end;
     end;
