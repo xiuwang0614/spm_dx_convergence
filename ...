@@ -1,0 +1,25 @@
+function [dx] = spm_dx(dfdx,f,t)
+# dp = spm_dx(dFdpp,dFdp,{t});
+#dFdpp = spm_cat({dFdbb,dFdbg;
+                  dFdbg' dFdgg});
+#dFdbb = dFdbb + Xi'*(rP*sC*rP -rP)*Xi;
+#Xi = kron(X(i,:),W);
+
+nmax = 512;?????
+
+
+
+
+
+
+
+
+[n,n] = size(A);
+# [23,23] = size(A);
+anorm = norm(A,'inf');
+mxrej = 10;  btol  = 1.0e-7;
+gamma = 0.9; delta = 1.2;
+mb    = m; t_out   = abs(t);
+nstep = 0; t_new   = 0;
+t_now = 0; s_error = 0;
+rndoff= anorm*eps;
