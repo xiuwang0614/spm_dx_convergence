@@ -94,6 +94,9 @@ while t_now < t_out
             break;
             fprintf('err_loc <= delta * t_step*tol');
             % 调整了tol, tol 似乎只与t_step,t_now...有关，决定循环的数量，只要这里别break出去应该就没问题。
+            % 这里是必须得break出去吧？？？
+            % 不然ireject一定会加到=10....是吧？？
+            % 所以tol越大越好？？就肯定会break出去？？？？？
             % 检查一下。
             % 有点问题，见w
         else
